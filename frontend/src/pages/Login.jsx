@@ -67,28 +67,29 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center px-16 py-1">
+    <div className="min-h-screen flex items-center justify-center ">
       <Toaster />
       <form
         onSubmit={submitHandler}
-        className="flex flex-col gap-6 items-center justify-center mt-20 w-[30rem]"
+        className="flex flex-col gap-5 items-center justify-center w-[26rem] bg-slate-200 px-8 py-8 rounded-sm border border-cyan-200"
       >
+        <p className="text-3xl font-semibold mb-6 text-cyan-700">Login</p>
         <input
           type="email"
           placeholder="email"
-          className="border border-teal-400 outline-teal-500 text-slate-600 p-2 w-full rounded-md"
+          className="border border-cyan-500 text-slate-600 p-2 w-full rounded-sm outline-cyan-600"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           placeholder="password"
-          className="border border-teal-400 outline-teal-500 text-slate-600 p-2 w-full rounded-md"
+          className="border border-cyan-500 text-slate-600 p-2 w-full rounded-sm outline-cyan-600"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button className="bg-teal-500 text-white px-6 py-2 rounded-md w-full mt-2">
+        <button className="bg-cyan-600 p-2 text-white rounded-sm hover:bg-cyan-700 w-full mt-3 mb-3">
           Login
         </button>
       </form>
